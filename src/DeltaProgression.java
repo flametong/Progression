@@ -11,6 +11,10 @@ public class DeltaProgression extends  Progression {
         this.secondVal = secondVal;
     }
 
+    private long secondValue() {
+        return secondVal;
+    }
+
     private long thirdValue() {
         cur = Math.abs(first - secondVal);
         return cur;
@@ -22,10 +26,6 @@ public class DeltaProgression extends  Progression {
         cur = Math.abs(secondVal - cur);
         secondVal = preVal;
         return cur;
-    }
-
-    private long secondValue() {
-        return secondVal;
     }
 
     @Override
